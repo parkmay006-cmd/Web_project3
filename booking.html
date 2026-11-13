@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Online Studio Reservation & Live Cost Calculator at LUMEN STUDIO. Developed by Omnia Ibrahim Muharraq - Jazan University MGIS 372.">
+  <meta name="author" content="Omnia Ibrahim Muharraq - Jazan University">
+  <title data-en="Book a Studio Online | LUMEN STUDIO" data-ar="احجز استوديو أونلاين | لومين استوديو">Book a Studio Online | LUMEN STUDIO</title>
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/booking.css">
+</head>
+<body id="top">
+
+  <!-- ================= 1. OFFICIAL JAZAN UNIVERSITY ACADEMIC TOPBAR ================= -->
+  <div class="academic-topbar">
+    <div class="container academic-topbar-inner">
+      <div class="uni-badge">
+        <span class="uni-crest">JU</span>
+        <span data-en="Kingdom of Saudi Arabia • Ministry of Education • Jazan University • College of Business"
+              data-ar="المملكة العربية السعودية • وزارة التعليم • جامعة جازان • كلية الأعمال">
+          Kingdom of Saudi Arabia • Ministry of Education • Jazan University • College of Business
+        </span>
+      </div>
+      <div>
+        <span class="course-pill"
+              data-en="WEB Application Development (MGIS 372)"
+              data-ar="تطوير تطبيقات الويب (MGIS 372)">
+          WEB Application Development (MGIS 372)
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 2. STICKY NAVIGATION HEADER ================= -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">L</div>
+        <div class="brand-text" data-html="true"
+             data-en="LUMEN <span>STUDIO</span>"
+             data-ar="لُومين <span>استوديو</span>">LUMEN <span>STUDIO</span></div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+          <li><a href="studios.html" data-en="Explore Studios" data-ar="استعراض الاستديوهات">Explore Studios</a></li>
+          <li><a href="pricing.html" data-en="Packages & Pricing" data-ar="الباقات والأسعار">Packages & Pricing</a></li>
+          <li><a href="booking.html" class="active" data-en="Book a Studio" data-ar="احجز استوديو">Book a Studio</a></li>
+          <li><a href="about.html" data-en="About & Team" data-ar="عن المنصة والطالبات">About & Team</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" id="langSwitchBtn" class="lang-switch-btn" aria-label="Switch Language">
+          <span class="lang-globe">🌐</span>
+          <span id="langBtnText">العربية (AR)</span>
+        </button>
+        <a href="booking.html" class="btn btn-primary btn-sm"
+           data-en="Reserve Now" data-ar="احجز الآن">Reserve Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-padding" style="padding-top: 2.5rem;">
+      <div class="container">
+
+        <!-- Student Page Attribution Ribbon -->
+        <div class="student-page-ribbon">
+          <div class="ribbon-left">
+            <div class="student-avatar-dot">4</div>
+            <div class="ribbon-meta">
+              <span data-en="Page Designed & Developed by Student:" data-ar="تم تصميم وتطوير هذه الصفحة بواسطة الطالبة:">Page Designed & Developed by Student:</span>
+              <strong data-en="Omnia Ibrahim Muharraq (امنية ابراهيم محرق)"
+                      data-ar="امنية ابراهيم محرق (Omnia Ibrahim Muharraq)">Omnia Ibrahim Muharraq (امنية ابراهيم محرق)</strong>
+            </div>
+          </div>
+          <div class="ribbon-meta">
+            <span data-en="Module: Interactive Booking Form (booking.html + css/booking.css)"
+                  data-ar="الوحدة: نظام الحجز التفاعلي (booking.html + css/booking.css)">Module: Interactive Booking Form (booking.html + css/booking.css)</span>
+          </div>
+        </div>
+
+        <div class="section-header">
+          <span class="eyebrow-badge" data-en="📅 Instant Studio Reservation & Customizer" data-ar="📅 نظام حجز الاستديوهات وتخصيص الجلسة">📅 Instant Studio Reservation & Customizer</span>
+          <h1 class="section-title" data-html="true"
+              data-en="Reserve Your <span class='highlight'>Creative Studio Session</span>"
+              data-ar="احجزي جلستكِ في <span class='highlight'>الاستوديو الآن</span>">
+            Reserve Your <span class="highlight">Creative Studio Session</span>
+          </h1>
+          <p class="section-subtitle"
+             data-en="Complete the interactive HTML5 reservation form below. Customize your studio space, RGB lighting mood, and gear add-ons with real-time pricing."
+             data-ar="عبئي نموذج الحجز التفاعلي أدناه، وخصصي نوع الاستوديو ولون الإضاءة المحيطية والمعدات الإضافية مع حساب فوري للتكلفة.">
+            Complete the interactive HTML5 reservation form below. Customize your studio space, RGB lighting mood, and gear add-ons with real-time pricing.
+          </p>
+        </div>
+
+        <div class="booking-layout-grid">
+
+          <!-- ================= LEFT: HTML5 ADVANCED RESERVATION FORM (CH. 2, 4, 5) ================= -->
+          <div class="booking-form-card">
+            <form id="studioBookingForm" action="#" method="post" autocomplete="on">
+
+              <!-- Fieldset 1: Creator / Client Information -->
+              <fieldset class="form-fieldset">
+                <legend data-en="1. Creator & Contact Details" data-ar="1. بيانات الحاجز والتواصل">1. Creator & Contact Details</legend>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="clientName">
+                      <span data-en="Full Name" data-ar="الاسم الكامل">Full Name</span> <span class="req">*</span>
+                    </label>
+                    <input type="text" id="clientName" name="clientName" class="form-control"
+                           required autofocus autocomplete="name"
+                           data-en-placeholder="e.g., Sara Al-Qahtani"
+                           data-ar-placeholder="مثال: سارة القحطاني"
+                           placeholder="e.g., Sara Al-Qahtani">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="clientEmail">
+                      <span data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</span> <span class="req">*</span>
+                    </label>
+                    <input type="email" id="clientEmail" name="clientEmail" class="form-control"
+                           required autocomplete="email"
+                           data-en-placeholder="creator@jazanu.edu.sa"
+                           data-ar-placeholder="creator@jazanu.edu.sa"
+                           placeholder="creator@jazanu.edu.sa">
+                  </div>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="clientPhone">
+                      <span data-en="Mobile Number (tel)" data-ar="رقم الجوال">Mobile Number (tel)</span> <span class="req">*</span>
+                    </label>
+                    <input type="tel" id="clientPhone" name="clientPhone" class="form-control"
+                           required autocomplete="tel"
+                           placeholder="+966 5X XXX XXXX">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="portfolioUrl">
+                      <span data-en="Portfolio / Social Link (url)" data-ar="رابط الأعمال أو الحساب الإبداعي (اختياري)">Portfolio / Social Link (url)</span>
+                    </label>
+                    <input type="url" id="portfolioUrl" name="portfolioUrl" class="form-control"
+                           placeholder="https://instagram.com/yourstudio">
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Fieldset 2: Studio Space, Date, Time & RGB Mood Customizer -->
+              <fieldset class="form-fieldset">
+                <legend data-en="2. Studio Space, Schedule & Lighting Mood" data-ar="2. اختيار الاستوديو والموعد وتخصيص الإضاءة">2. Studio Space, Schedule & Lighting Mood</legend>
+
+                <div class="form-group">
+                  <label for="studioSelect">
+                    <span data-en="Select Studio Space" data-ar="اختاري الاستوديو المطلوب">Select Studio Space</span> <span class="req">*</span>
+                  </label>
+                  <select id="studioSelect" name="studioSelect" class="form-control" required>
+                    <option value="apex-photo" data-rate="220"
+                            data-en="📸 Apex Editorial Photo Loft — (220 SAR/hr)"
+                            data-ar="📸 استوديو أبيكس للتصوير الفوتوغرافي — (220 ر.س/ساعة)">📸 Apex Editorial Photo Loft — (220 SAR/hr)</option>
+                    <option value="voxpro-podcast" data-rate="250"
+                            data-en="🎙️ VoxPro 4K Podcast Suite — (250 SAR/hr)"
+                            data-ar="🎙️ استوديو فوكس برو للبودكاست 4K — (250 ر.س/ساعة)">🎙️ VoxPro 4K Podcast Suite — (250 SAR/hr)</option>
+                    <option value="neon-creative" data-rate="290"
+                            data-en="🎬 Neon Pulse Creative Lab — (290 SAR/hr)"
+                            data-ar="🎬 مختبر نيون الإبداعي لصناع المحتوى — (290 ر.س/ساعة)">🎬 Neon Pulse Creative Lab — (290 SAR/hr)</option>
+                    <option value="daylight-cyc" data-rate="320"
+                            data-en="☀️ Horizon Daylight & Cyclorama — (320 SAR/hr)"
+                            data-ar="☀️ استوديو هورايزن سايكلوراما — (320 ر.س/ساعة)">☀️ Horizon Daylight & Cyclorama — (320 SAR/hr)</option>
+                    <option value="soundwave-audio" data-rate="240"
+                            data-en="🎧 SoundWave Vocal & Mastering — (240 SAR/hr)"
+                            data-ar="🎧 استوديو ساوند ويف للتعليق الصوتي — (240 ر.س/ساعة)">🎧 SoundWave Vocal & Mastering — (240 SAR/hr)</option>
+                    <option value="cinema-stage" data-rate="420"
+                            data-en="🎥 Visionary Cinema & Chroma Stage — (420 SAR/hr)"
+                            data-ar="🎥 المسرح السينمائي واستوديو الكروما — (420 ر.س/ساعة)">🎥 Visionary Cinema & Chroma Stage — (420 SAR/hr)</option>
+                  </select>
+                </div>
+
+                <div class="form-row-3">
+                  <div class="form-group">
+                    <label for="bookingDate">
+                      <span data-en="Session Date (date)" data-ar="تاريخ الجلسة">Session Date (date)</span> <span class="req">*</span>
+                    </label>
+                    <input type="date" id="bookingDate" name="bookingDate" class="form-control" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="bookingTime">
+                      <span data-en="Start Time (time)" data-ar="وقت البدء">Start Time (time)</span> <span class="req">*</span>
+                    </label>
+                    <input type="time" id="bookingTime" name="bookingTime" class="form-control" value="14:00" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="hoursInput">
+                      <span data-en="Duration in Hours (number)" data-ar="عدد الساعات">Duration in Hours (number)</span> <span class="req">*</span>
+                    </label>
+                    <input type="number" id="hoursInput" name="hoursInput" class="form-control" min="1" max="12" value="2" required>
+                  </div>
+                </div>
+
+                <div class="form-row-2">
+                  <!-- HTML5 type="color" -->
+                  <div class="form-group">
+                    <label for="backdropColor"
+                           data-en="Studio RGB Mood Light Color (color)"
+                           data-ar="لون الإضاءة المحيطية في الاستوديو (RGB Color)">Studio RGB Mood Light Color (color)</label>
+                    <div class="lighting-color-wrap">
+                      <input type="color" id="backdropColor" name="backdropColor" value="#f59e0b">
+                      <div id="lightingPreviewOrb" class="lighting-preview-orb"></div>
+                      <span id="colorHexText" style="font-family:monospace; font-weight:700;">#F59E0B</span>
+                    </div>
+                  </div>
+
+                  <!-- HTML5 type="range" -->
+                  <div class="form-group range-slider-wrap">
+                    <label for="lightingIntensity">
+                      <span data-en="Pre-Set Key Light Brightness (range):" data-ar="مستوى سطوع الإضاءة المبدئي (range):">Pre-Set Key Light Brightness (range):</span>
+                      <strong id="lightingValOut" style="color:var(--accent-gold-light);">80%</strong>
+                    </label>
+                    <input type="range" id="lightingIntensity" name="lightingIntensity" min="10" max="100" step="5" value="80">
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Fieldset 3: Session Type (Radio) & Extra Add-ons (Checkboxes) -->
+              <fieldset class="form-fieldset">
+                <legend data-en="3. Production Type & Extra Gear Add-ons" data-ar="3. نوع الجلسة والمعدات الإضافية">3. Production Type & Extra Gear Add-ons</legend>
+
+                <div class="form-group">
+                  <label data-en="Primary Session Purpose (Radio Buttons)" data-ar="الهدف الأساسي من الجلسة (اختيار واحد)">Primary Session Purpose (Radio Buttons)</label>
+                  <div class="options-grid">
+                    <label class="option-check-card">
+                      <input type="radio" name="sessionPurpose" value="photo" checked>
+                      <span data-en="📸 Editorial / Product Photography" data-ar="📸 جلسة تصوير فوتوغرافي / منتجات">📸 Editorial / Product Photography</span>
+                    </label>
+                    <label class="option-check-card">
+                      <input type="radio" name="sessionPurpose" value="podcast">
+                      <span data-en="🎙️ Video / Audio Podcast Recording" data-ar="🎙️ تسجيل حلقة بودكاست صوتي/مرئي">🎙️ Video / Audio Podcast Recording</span>
+                    </label>
+                    <label class="option-check-card">
+                      <input type="radio" name="sessionPurpose" value="commercial">
+                      <span data-en="🎬 Commercial Video & Reels" data-ar="🎬 تصوير فيديو إعلاني / ريلز">🎬 Commercial Video & Reels</span>
+                    </label>
+                    <label class="option-check-card">
+                      <input type="radio" name="sessionPurpose" value="academic">
+                      <span data-en="🎓 University / Graduation Project" data-ar="🎓 مشروع جامعي / تخرج">🎓 University / Graduation Project</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 1.25rem;">
+                  <label data-en="Optional Gear & Crew Add-ons (Checkboxes)" data-ar="إضافات اختيارية للمعدات والطاقم (متعدد الخيارات)">Optional Gear & Crew Add-ons (Checkboxes)</label>
+                  <div class="options-grid">
+                    <label class="option-check-card">
+                      <input type="checkbox" class="gear-addon-check" data-price="150">
+                      <span data-en="🎥 Sony FX3 Cinema Camera (+150 SAR)" data-ar="🎥 كاميرا سينمائية Sony FX3 (+150 ر.س)">🎥 Sony FX3 Cinema Camera (+150 SAR)</span>
+                    </label>
+                    <label class="option-check-card">
+                      <input type="checkbox" class="gear-addon-check" data-price="180">
+                      <span data-en="🎧 Dedicated Sound Engineer (+180 SAR)" data-ar="🎧 مهندسة صوت مرافقة (+180 ر.س)">🎧 Dedicated Sound Engineer (+180 SAR)</span>
+                    </label>
+                    <label class="option-check-card">
+                      <input type="checkbox" class="gear-addon-check" data-price="120">
+                      <span data-en="💡 Extra Aputure RGB Tube Kit (+120 SAR)" data-ar="💡 حقيبة إضاءة نيون RGB إضافية (+120 ر.س)">💡 Extra Aputure RGB Tube Kit (+120 SAR)</span>
+                    </label>
+                    <label class="option-check-card">
+                      <input type="checkbox" class="gear-addon-check" data-price="90">
+                      <span data-en="📜 Teleprompter iPad Rig (+90 SAR)" data-ar="📜 جهاز ملقن نصوص أمام الكاميرا (+90 ر.س)">📜 Teleprompter iPad Rig (+90 SAR)</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Special Jazan University Student Discount Checkbox -->
+                <div class="form-group" style="margin-top: 1rem;">
+                  <label class="option-check-card" style="border-color: var(--accent-gold); background: rgba(245, 158, 11, 0.1);">
+                    <input type="checkbox" id="jazanStudentDiscount" checked>
+                    <strong style="color: var(--accent-gold-light);"
+                            data-en="🎓 Apply Jazan University Student Discount (25% OFF Total)"
+                            data-ar="🎓 تفعيل خصم طالبات جامعة جازان (خصم فوري 25%)">
+                      🎓 Apply Jazan University Student Discount (25% OFF Total)
+                    </strong>
+                  </label>
+                </div>
+
+                <!-- Textarea -->
+                <div class="form-group" style="margin-top: 1.15rem; margin-bottom: 0;">
+                  <label for="setupNotes"
+                         data-en="Special Studio Setup & Backdrop Notes (textarea)"
+                         data-ar="ملاحظات خاصة لتجهيز الاستوديو قبل وصولكِ">Special Studio Setup & Backdrop Notes (textarea)</label>
+                  <textarea id="setupNotes" name="setupNotes" rows="3" class="form-control"
+                            data-en-placeholder="Let our studio team know if you need specific paper backdrop colors, table layouts, or coffee preferences..."
+                            data-ar-placeholder="اكتبي أي متطلبات خاصة مثل لون الخلفية الورقية، ترتيب طاولة البودكاست، أو تجهيزات الضيافة..."
+                            placeholder="Let our studio team know if you need specific paper backdrop colors, table layouts, or coffee preferences..."></textarea>
+                </div>
+              </fieldset>
+
+              <!-- Submit & Reset Buttons (Chapter 2 Form Requirement) -->
+              <div class="form-actions-bar">
+                <button type="reset" class="btn btn-outline"
+                        data-en="↺ Reset Form" data-ar="↺ تفريغ الحقول">↺ Reset Form</button>
+                <button type="submit" class="btn btn-primary"
+                        data-en="✓ Confirm Studio Reservation" data-ar="✓ تأكيد حجز الاستوديو الآن">✓ Confirm Studio Reservation</button>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- ================= RIGHT: LIVE BOOKING INVOICE SIDEBAR (<aside>) ================= -->
+          <aside class="booking-summary-aside" aria-label="Live Booking Summary">
+            <span class="eyebrow-badge" data-en="🧾 Live Price Summary" data-ar="🧾 ملخص الحجز والتكلفة الفورية">🧾 Live Price Summary</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 1rem;"
+                data-en="Your Studio Pass Preview" data-ar="معاينة الاستوديو والفاتورة">Your Studio Pass Preview</h3>
+
+            <div class="summary-studio-preview">
+              <img id="summaryStudioImg" src="images/photo-studio-1.jpg" alt="Selected Studio Preview">
+              <div id="rgbAmbientOverlay" class="rgb-ambient-overlay"></div>
+            </div>
+
+            <strong id="sumStudioName" style="display:block; font-size:1.05rem; color:var(--accent-gold-light); margin-bottom:0.3rem;">
+              📸 Apex Editorial Photo Loft
+            </strong>
+            <small style="color:var(--text-muted);"
+                   data-en="RGB Mood Light & Equipment Pre-Calibrated"
+                   data-ar="تجهيز مسبق للإضاءة والمعدات قبل وصولك">
+              RGB Mood Light & Equipment Pre-Calibrated
+            </small>
+
+            <ul class="receipt-list">
+              <li>
+                <span data-en="Rate × Duration" data-ar="سعر الساعة × المدة">Rate × Duration</span>
+                <span id="sumRateHours">220 SAR × 2h</span>
+              </li>
+              <li>
+                <span data-en="Studio Base Rental" data-ar="تكلفة حجز الاستوديو">Studio Base Rental</span>
+                <span id="sumBaseCost">440 SAR</span>
+              </li>
+              <li>
+                <span data-en="Extra Gear Add-ons" data-ar="المعدات والخدمات الإضافية">Extra Gear Add-ons</span>
+                <span id="sumAddonsCost">+0 SAR</span>
+              </li>
+              <li style="color: var(--accent-emerald); font-weight: 700;">
+                <span data-en="Jazan Uni Student Discount (25%)" data-ar="خصم طالبات جامعة جازان (25%)">Jazan Uni Student Discount (25%)</span>
+                <span id="sumDiscountCost">-110 SAR</span>
+              </li>
+            </ul>
+
+            <div class="receipt-total-row">
+              <span data-en="Estimated Total" data-ar="الإجمالي النهائي">Estimated Total</span>
+              <span id="sumFinalTotal">330 SAR</span>
+            </div>
+
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem; text-align: center;"
+               data-en="🔒 No upfront credit card charge required for Jazan University student projects."
+               data-ar="🔒 لا يتطلب دفع مسبق لمشاريع طالبات جامعة جازان — الدفع عند الحضور.">
+              🔒 No upfront credit card charge required for Jazan University student projects.
+            </p>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= INTERACTIVE BOOKING CONFIRMATION MODAL ================= -->
+  <div id="bookingSuccessModal" class="booking-modal-backdrop" role="dialog" aria-modal="true">
+    <div class="booking-modal-box">
+      <div class="modal-check-icon">✓</div>
+      <h2 style="font-size:1.65rem; margin-bottom:0.5rem;"
+          data-en="Studio Reservation Confirmed!" data-ar="تم تأكيد حجز الاستوديو بنجاح!">Studio Reservation Confirmed!</h2>
+      <p style="color:var(--text-secondary); margin-bottom:1.25rem;">
+        <span data-en="Thank you, " data-ar="شكراً لكِ، ">Thank you, </span>
+        <strong id="modalClientName" style="color:var(--accent-gold-light);">Creator</strong>!
+        <span data-en=" Your studio space and lighting rig have been scheduled."
+              data-ar=" تم جدولة الاستوديو وتجهيز المعدات الخاصة بكِ.">
+          Your studio space and lighting rig have been scheduled.
+        </span>
+      </p>
+      <div style="background:var(--bg-primary); border:1px dashed var(--accent-gold); padding:1rem; border-radius:12px; margin-bottom:1.5rem;">
+        <small style="display:block; color:var(--text-muted);"
+               data-en="BOOKING REFERENCE PASS" data-ar="رقم تذكرة الحجز المرجعي">BOOKING REFERENCE PASS</small>
+        <strong id="modalBookingRef" style="font-size:1.5rem; color:var(--accent-gold-light); letter-spacing:2px;">LMN-849201</strong>
+      </div>
+      <button type="button" id="closeModalBtn" class="btn btn-primary" style="width:100%;"
+              data-en="Done & Return to Booking" data-ar="إغلاق والعودة للصفحة">Done & Return to Booking</button>
+    </div>
+  </div>
+
+  <!-- ================= 4. FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon">L</div>
+            <div class="brand-text" data-html="true"
+                 data-en="LUMEN <span>STUDIO</span>"
+                 data-ar="لُومين <span>استوديو</span>">LUMEN <span>STUDIO</span></div>
+          </a>
+          <p data-en="Saudi Arabia's premier creative studio booking platform for photography, podcast production, and commercial filmmaking."
+             data-ar="المنصة الرائدة لاستعراض وحجز استديوهات التصوير الفوتوغرافي، استديوهات البودكاست، والاستديوهات الإبداعية.">
+            Saudi Arabia's premier creative studio booking platform for photography, podcast production, and commercial filmmaking.
+          </p>
+          <div class="uni-footer-box">
+            <strong data-en="Kingdom of Saudi Arabia • Ministry of Education"
+                    data-ar="المملكة العربية السعودية • وزارة التعليم">Kingdom of Saudi Arabia • Ministry of Education</strong>
+            <span data-en="Jazan University — College of Business | Course: WEB Application Development (MGIS 372)"
+                  data-ar="جامعة جازان — كلية الأعمال | مقرر: تطوير تطبيقات الويب (MGIS 372)">
+              Jazan University — College of Business | Course: WEB Application Development (MGIS 372)
+            </span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-en="Platform Pages" data-ar="صفحات المنصة">Platform Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-en="Home & Discovery" data-ar="الرئيسية والاستكشاف">Home & Discovery</a></li>
+            <li><a href="studios.html" data-en="Explore All Studios" data-ar="استعراض الاستديوهات">Explore All Studios</a></li>
+            <li><a href="pricing.html" data-en="Packages & Comparison" data-ar="الباقات وجدول المقارنة">Packages & Comparison</a></li>
+            <li><a href="booking.html" data-en="Online Studio Booking" data-ar="نظام حجز الاستديوهات">Online Studio Booking</a></li>
+            <li><a href="about.html" data-en="About & Student Team" data-ar="عن المنصة وفريق الطالبات">About & Student Team</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-en="Studio Spaces" data-ar="أنواع الاستديوهات">Studio Spaces</h4>
+          <ul class="footer-links">
+            <li><a href="booking.html?studio=apex-photo" data-en="Apex Photo Loft" data-ar="استوديو أبيكس للتصوير">Apex Photo Loft</a></li>
+            <li><a href="booking.html?studio=voxpro-podcast" data-en="VoxPro Podcast Suite" data-ar="استوديو فوكس برو للبودكاست">VoxPro Podcast Suite</a></li>
+            <li><a href="booking.html?studio=neon-creative" data-en="Neon Pulse Creative Lab" data-ar="مختبر نيون الإبداعي">Neon Pulse Creative Lab</a></li>
+            <li><a href="booking.html?studio=daylight-cyc" data-en="Daylight Cyclorama Wall" data-ar="استوديو السايكلوراما">Daylight Cyclorama Wall</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-en="Team Members (MGIS 372)" data-ar="أسماء الطالبات المشاركات">Team Members (MGIS 372)</h4>
+          <ul class="team-footer-list">
+            <li><span>اشواق محمد احمد حكمي</span> <span class="page-tag">index.html</span></li>
+            <li><span>اريام محمد عشوي</span> <span class="page-tag">studios.html</span></li>
+            <li><span>جنا عبدالرحمن الدوسري</span> <span class="page-tag">pricing.html</span></li>
+            <li><span>امنية ابراهيم محرق</span> <span class="page-tag">booking.html</span></li>
+            <li><span>جنان يحيى حملي</span> <span class="page-tag">about.html</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-en="© 2026 LUMEN STUDIO Platform — Original Academic Group Project for Jazan University (MGIS 372)."
+              data-ar="© 2026 منصة لومين استوديو — مشروع جماعي أصيل لطالبات جامعة جازان - كلية الأعمال (MGIS 372).">
+          © 2026 LUMEN STUDIO Platform — Original Academic Group Project for Jazan University (MGIS 372).
+        </span>
+        <a href="#top" style="color:var(--accent-gold-light); font-weight:700;"
+           data-en="↑ Back to Top" data-ar="↑ العودة للأعلى">↑ Back to Top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Photography, Podcast, Cyclorama, and Creative Studios at LUMEN STUDIO. Developed by Aryam Mohammed Ashwi - Jazan University MGIS 372.">
+  <meta name="author" content="Aryam Mohammed Ashwi - Jazan University">
+  <title data-en="Explore Studios & Equipment | LUMEN STUDIO" data-ar="استعراض الاستديوهات والمعدات | لومين استوديو">Explore Studios & Equipment | LUMEN STUDIO</title>
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/studios.css">
+</head>
+<body id="top">
+
+  <!-- ================= 1. OFFICIAL JAZAN UNIVERSITY ACADEMIC TOPBAR ================= -->
+  <div class="academic-topbar">
+    <div class="container academic-topbar-inner">
+      <div class="uni-badge">
+        <span class="uni-crest">JU</span>
+        <span data-en="Kingdom of Saudi Arabia • Ministry of Education • Jazan University • College of Business"
+              data-ar="المملكة العربية السعودية • وزارة التعليم • جامعة جازان • كلية الأعمال">
+          Kingdom of Saudi Arabia • Ministry of Education • Jazan University • College of Business
+        </span>
+      </div>
+      <div>
+        <span class="course-pill"
+              data-en="WEB Application Development (MGIS 372)"
+              data-ar="تطوير تطبيقات الويب (MGIS 372)">
+          WEB Application Development (MGIS 372)
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 2. STICKY NAVIGATION HEADER ================= -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">L</div>
+        <div class="brand-text" data-html="true"
+             data-en="LUMEN <span>STUDIO</span>"
+             data-ar="لُومين <span>استوديو</span>">LUMEN <span>STUDIO</span></div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+          <li><a href="studios.html" class="active" data-en="Explore Studios" data-ar="استعراض الاستديوهات">Explore Studios</a></li>
+          <li><a href="pricing.html" data-en="Packages & Pricing" data-ar="الباقات والأسعار">Packages & Pricing</a></li>
+          <li><a href="booking.html" data-en="Book a Studio" data-ar="احجز استوديو">Book a Studio</a></li>
+          <li><a href="about.html" data-en="About & Team" data-ar="عن المنصة والطالبات">About & Team</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" id="langSwitchBtn" class="lang-switch-btn" aria-label="Switch Language">
+          <span class="lang-globe">🌐</span>
+          <span id="langBtnText">العربية (AR)</span>
+        </button>
+        <a href="booking.html" class="btn btn-primary btn-sm"
+           data-en="Reserve Now" data-ar="احجز الآن">Reserve Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section class="page-hero-banner">
+      <div class="container">
+        <!-- Student Page Attribution Ribbon -->
+        <div class="student-page-ribbon">
+          <div class="ribbon-left">
+            <div class="student-avatar-dot">2</div>
+            <div class="ribbon-meta">
+              <span data-en="Page Designed & Developed by Student:" data-ar="تم تصميم وتطوير هذه الصفحة بواسطة الطالبة:">Page Designed & Developed by Student:</span>
+              <strong data-en="Aryam Mohammed Ashwi (اريام محمد عشوي)"
+                      data-ar="اريام محمد عشوي (Aryam Mohammed Ashwi)">Aryam Mohammed Ashwi (اريام محمد عشوي)</strong>
+            </div>
+          </div>
+          <div class="ribbon-meta">
+            <span data-en="Module: Studios Catalog & Gear (studios.html + css/studios.css)"
+                  data-ar="الوحدة: كتالوج الاستديوهات والمعدات (studios.html + css/studios.css)">Module: Studios Catalog & Gear (studios.html + css/studios.css)</span>
+          </div>
+        </div>
+
+        <div class="section-header" style="margin-bottom: 1rem;">
+          <span class="eyebrow-badge" data-en="🏛️ 6 Specialized Production Spaces" data-ar="🏛️ 6 استديوهات احترافية متكاملة">🏛️ 6 Specialized Production Spaces</span>
+          <h1 class="section-title" data-html="true"
+              data-en="Explore Available <span class='highlight'>Studios & Equipment</span>"
+              data-ar="استعراض <span class='highlight'>الاستديوهات المتاحة للحجز</span> والمعدات">
+            Explore Available <span class="highlight">Studios & Equipment</span>
+          </h1>
+          <p class="section-subtitle"
+             data-en="Filter by studio type or search for specific gear like Shure SM7B, Cyclorama, Profoto, or 4K Cinema stages."
+             data-ar="صنّفي الاستديوهات حسب النوع (تصوير، بودكاست، إبداعي) أو ابحثي عن المعدات المتوفرة في كل مساحة.">
+            Filter by studio type or search for specific gear like Shure SM7B, Cyclorama, Profoto, or 4K Cinema stages.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STUDIO CATALOG & INTERACTIVE FILTER ================= -->
+    <section class="section-padding" style="padding-top: 2.5rem;">
+      <div class="container">
+
+        <!-- Filter & HTML5 Search with <datalist> (Chapter 4/5) -->
+        <div class="filter-toolbar">
+          <div class="filter-tabs" role="tablist">
+            <button type="button" class="filter-btn active" data-filter="all"
+                    data-en="All Studios (6)" data-ar="جميع الاستديوهات (6)">All Studios (6)</button>
+            <button type="button" class="filter-btn" data-filter="photography"
+                    data-en="📸 Photography (2)" data-ar="📸 استديوهات التصوير (2)">📸 Photography (2)</button>
+            <button type="button" class="filter-btn" data-filter="podcast"
+                    data-en="🎙️ Podcast & Audio (2)" data-ar="🎙️ استديوهات البودكاست (2)">🎙️ Podcast & Audio (2)</button>
+            <button type="button" class="filter-btn" data-filter="creative"
+                    data-en="🎬 Creative & Film (2)" data-ar="🎬 الاستديوهات الإبداعية (2)">🎬 Creative & Film (2)</button>
+          </div>
+
+          <div class="search-box-wrap">
+            <input type="search" id="studioSearchInput" list="studioKeywords"
+                   data-en-placeholder="🔍 Search studios or gear (e.g., Podcast, Cyclorama)..."
+                   data-ar-placeholder="🔍 ابحثي عن استوديو أو معدة (مثل: بودكاست، سايكلوراما)..."
+                   placeholder="🔍 Search studios or gear (e.g., Podcast, Cyclorama)...">
+            <datalist id="studioKeywords">
+              <option value="Photography">
+              <option value="Podcast">
+              <option value="Cyclorama">
+              <option value="Shure SM7B">
+              <option value="Profoto">
+              <option value="Cinema">
+            </datalist>
+          </div>
+        </div>
+
+        <!-- 6 Studio Cards Grid -->
+        <div class="studios-catalog-grid">
+
+          <!-- Studio 1: Apex Photo Loft -->
+          <article class="studio-item-card" data-category="photography">
+            <div class="studio-thumb">
+              <img src="images/photo-studio-1.jpg" alt="Apex Photo Loft Studio">
+              <span class="studio-badge-top" data-en="📸 Photography" data-ar="📸 تصوير فوتوغرافي">📸 Photography</span>
+              <span class="studio-rating-pill">★ 4.95</span>
+            </div>
+            <div class="studio-content">
+              <div class="studio-meta-row">
+                <span data-en="📐 85 m² • Up to 10 Crew" data-ar="📐 المساحة 85 م² • حتى 10 أشخاص">📐 85 m² • Up to 10 Crew</span>
+                <span data-en="🟢 Instant Booking" data-ar="🟢 متاح للحجز الفوري">🟢 Instant Booking</span>
+              </div>
+              <h3 data-en="Apex Editorial Photo Loft" data-ar="استوديو أبيكس للتصوير الفوتوغرافي">Apex Editorial Photo Loft</h3>
+              <p data-en="Ideal for portrait, fashion, e-commerce product photography, and graduation shoots with full Profoto strobe lighting."
+                 data-ar="مثالي لتصوير البورتريه والأزياء والمنتجات التجارية وجلسات التخرج مع منظومة إضاءة Profoto المتكاملة.">
+                Ideal for portrait, fashion, e-commerce product photography, and graduation shoots with full Profoto strobe lighting.
+              </p>
+              <div class="spec-chips">
+                <span class="spec-chip">3× Profoto D2</span>
+                <span class="spec-chip" data-en="6 Paper Backdrops" data-ar="6 خلفيات ورقية ملونة">6 Paper Backdrops</span>
+                <span class="spec-chip" data-en="Makeup Room" data-ar="غرفة مكياج">Makeup Room</span>
+              </div>
+              <div class="studio-card-footer">
+                <div class="price-tag-big">220 <small data-en="SAR / hour" data-ar="ر.س / ساعة">SAR / hour</small></div>
+                <a href="booking.html?studio=apex-photo" class="btn btn-primary btn-sm"
+                   data-en="Book Studio →" data-ar="احجز الاستوديو ←">Book Studio →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Studio 2: VoxPro Podcast Suite -->
+          <article class="studio-item-card" data-category="podcast">
+            <div class="studio-thumb">
+              <img src="images/podcast-studio-1.jpg" alt="VoxPro Podcast and Video Broadcast Suite">
+              <span class="studio-badge-top" data-en="🎙️ Podcast" data-ar="🎙️ بودكاست مرئي وصوتي">🎙️ Podcast</span>
+              <span class="studio-rating-pill">★ 5.00</span>
+            </div>
+            <div class="studio-content">
+              <div class="studio-meta-row">
+                <span data-en="📐 45 m² • Up to 4 Hosts" data-ar="📐 المساحة 45 م² • حتى 4 متحدثين">📐 45 m² • Up to 4 Hosts</span>
+                <span data-en="🔥 Most Popular" data-ar="🔥 الأكثر طلباً">🔥 Most Popular</span>
+              </div>
+              <h3 data-en="VoxPro 4K Podcast Suite" data-ar="استوديو فوكس برو للبودكاست 4K">VoxPro 4K Podcast Suite</h3>
+              <p data-en="Turnkey video & audio podcast room featuring acoustic oak panels, 4 Shure SM7B mics, RØDECaster Pro II, and 3 Sony FX30 cameras."
+                 data-ar="استوديو بودكاست متكامل بمعالجة صوتية فاخرة، مزود بـ 4 مايكروفونات Shure SM7B ومكسر RØDECaster و3 كاميرات سوني 4K.">
+                Turnkey video & audio podcast room featuring acoustic oak panels, 4 Shure SM7B mics, RØDECaster Pro II, and 3 Sony FX30 cameras.
+              </p>
+              <div class="spec-chips">
+                <span class="spec-chip">4× Shure SM7B</span>
+                <span class="spec-chip">3× Sony FX30 4K</span>
+                <span class="spec-chip">RØDECaster II</span>
+              </div>
+              <div class="studio-card-footer">
+                <div class="price-tag-big">250 <small data-en="SAR / hour" data-ar="ر.س / ساعة">SAR / hour</small></div>
+                <a href="booking.html?studio=voxpro-podcast" class="btn btn-primary btn-sm"
+                   data-en="Book Studio →" data-ar="احجز الاستوديو ←">Book Studio →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Studio 3: Neon Pulse Creative Lab -->
+          <article class="studio-item-card" data-category="creative">
+            <div class="studio-thumb">
+              <img src="images/creative-studio-1.jpg" alt="Neon Pulse Creative Content Studio">
+              <span class="studio-badge-top" data-en="🎬 Creative Lab" data-ar="🎬 استوديو إبداعي">🎬 Creative Lab</span>
+              <span class="studio-rating-pill">★ 4.92</span>
+            </div>
+            <div class="studio-content">
+              <div class="studio-meta-row">
+                <span data-en="📐 95 m² • Up to 12 Crew" data-ar="📐 المساحة 95 م² • حتى 12 شخصاً">📐 95 m² • Up to 12 Crew</span>
+                <span data-en="🎨 RGB Mood Sets" data-ar="🎨 ديكورات وإضاءة RGB">🎨 RGB Mood Sets</span>
+              </div>
+              <h3 data-en="Neon Pulse Creative Lab" data-ar="مختبر نيون الإبداعي لصناع المحتوى">Neon Pulse Creative Lab</h3>
+              <p data-en="Designed for YouTubers, TikTok/Reels creators, and commercial ads with customizable lifestyle sets and programmable RGB tubes."
+                 data-ar="مصمم خصيصاً لصناع المحتوى على يوتيوب وتيك توك والإعلانات الإبداعية مع زوايا ديكور متنوعة وإضاءات نيون ذكية.">
+                Designed for YouTubers, TikTok/Reels creators, and commercial ads with customizable lifestyle sets and programmable RGB tubes.
+              </p>
+              <div class="spec-chips">
+                <span class="spec-chip">Amaran RGB Tubes</span>
+                <span class="spec-chip" data-en="3 Furnished Sets" data-ar="3 ديكورات مؤثثة">3 Furnished Sets</span>
+                <span class="spec-chip" data-en="Teleprompter" data-ar="ملقن شاشة">Teleprompter</span>
+              </div>
+              <div class="studio-card-footer">
+                <div class="price-tag-big">290 <small data-en="SAR / hour" data-ar="ر.س / ساعة">SAR / hour</small></div>
+                <a href="booking.html?studio=neon-creative" class="btn btn-primary btn-sm"
+                   data-en="Book Studio →" data-ar="احجز الاستوديو ←">Book Studio →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Studio 4: Daylight Cyclorama Studio -->
+          <article class="studio-item-card" data-category="photography">
+            <div class="studio-thumb">
+              <img src="images/cyclorama-studio.jpg" alt="Daylight Infinity Cyclorama Studio">
+              <span class="studio-badge-top" data-en="☀️ Cyclorama" data-ar="☀️ سايكلوراما وإضاءة طبيعية">☀️ Cyclorama</span>
+              <span class="studio-rating-pill">★ 4.97</span>
+            </div>
+            <div class="studio-content">
+              <div class="studio-meta-row">
+                <span data-en="📐 130 m² • Up to 18 Crew" data-ar="📐 المساحة 130 م² • حتى 18 شخصاً">📐 130 m² • Up to 18 Crew</span>
+                <span data-en="☀️ Blackout Blinds" data-ar="☀️ ستائر تعتيم أوتوماتيكية">☀️ Blackout Blinds</span>
+              </div>
+              <h3 data-en="Horizon Daylight & Cyclorama" data-ar="استوديو هورايزن سايكلوراما والضوء الطبيعي">Horizon Daylight & Cyclorama</h3>
+              <p data-en="Massive two-wall curved white cyclorama with floor-to-ceiling north-facing windows and motorized blackout curtains."
+                 data-ar="جدار سايكلوراما أبيض منحني بزاويتين مع نوافذ بانورامية للإضاءة الطبيعية وستائر تعتيم كهربائية بالكامل.">
+                Massive two-wall curved white cyclorama with floor-to-ceiling north-facing windows and motorized blackout curtains.
+              </p>
+              <div class="spec-chips">
+                <span class="spec-chip" data-en="6m × 6m Cyc Wall" data-ar="جدار منحني 6×6 م">6m × 6m Cyc Wall</span>
+                <span class="spec-chip">Broncolor Siros</span>
+                <span class="spec-chip" data-en="Client Lounge" data-ar="صالة انتظار VIP">Client Lounge</span>
+              </div>
+              <div class="studio-card-footer">
+                <div class="price-tag-big">320 <small data-en="SAR / hour" data-ar="ر.س / ساعة">SAR / hour</small></div>
+                <a href="booking.html?studio=daylight-cyc" class="btn btn-primary btn-sm"
+                   data-en="Book Studio →" data-ar="احجز الاستوديو ←">Book Studio →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Studio 5: SoundWave Mastering Room -->
+          <article class="studio-item-card" data-category="podcast">
+            <div class="studio-thumb">
+              <img src="images/audio-studio.jpg" alt="SoundWave Vocal Booth and Audio Mastering Studio">
+              <span class="studio-badge-top" data-en="🎧 Voiceover & Audio" data-ar="🎧 تعليق صوتي وهندسة صوت">🎧 Voiceover & Audio</span>
+              <span class="studio-rating-pill">★ 4.94</span>
+            </div>
+            <div class="studio-content">
+              <div class="studio-meta-row">
+                <span data-en="📐 38 m² • Vocal Booth" data-ar="📐 المساحة 38 م² • كابينة عزل صوتي">📐 38 m² • Vocal Booth</span>
+                <span data-en="🎵 Neumann U87" data-ar="🎵 مايكروفون Neumann U87">🎵 Neumann U87</span>
+              </div>
+              <h3 data-en="SoundWave Vocal & Mastering" data-ar="استوديو ساوند ويف للتعليق الصوتي والماسترينغ">SoundWave Vocal & Mastering</h3>
+              <p data-en="Floating-floor acoustic booth tailored for audiobooks, commercial voiceovers, solo podcasts, and Dolby Atmos mixing."
+                 data-ar="غرفة عزل صوتي احترافية لتسجيل الكتب الصوتية، التعليق الصوتي الإعلاني (Voiceover)، والمكساج الصوتي.">
+                Floating-floor acoustic booth tailored for audiobooks, commercial voiceovers, solo podcasts, and Dolby Atmos mixing.
+              </p>
+              <div class="spec-chips">
+                <span class="spec-chip">Neumann U87 Ai</span>
+                <span class="spec-chip">Apollo Twin X</span>
+                <span class="spec-chip">Genelec Monitors</span>
+              </div>
+              <div class="studio-card-footer">
+                <div class="price-tag-big">240 <small data-en="SAR / hour" data-ar="ر.س / ساعة">SAR / hour</small></div>
+                <a href="booking.html?studio=soundwave-audio" class="btn btn-primary btn-sm"
+                   data-en="Book Studio →" data-ar="احجز الاستوديو ←">Book Studio →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Studio 6: Visionary Cinema Stage -->
+          <article class="studio-item-card" data-category="creative">
+            <div class="studio-thumb">
+              <img src="images/cinema-studio.jpg" alt="Visionary Cinema Production Stage">
+              <span class="studio-badge-top" data-en="🎥 Cinema Stage" data-ar="🎥 مسرح إنتاج سينمائي">🎥 Cinema Stage</span>
+              <span class="studio-rating-pill">★ 4.99</span>
+            </div>
+            <div class="studio-content">
+              <div class="studio-meta-row">
+                <span data-en="📐 180 m² • Up to 25 Crew" data-ar="📐 المساحة 180 م² • حتى 25 شخصاً">📐 180 m² • Up to 25 Crew</span>
+                <span data-en="🟢 Chroma Key Wall" data-ar="🟢 جدار كروما سينمائي">🟢 Chroma Key Wall</span>
+              </div>
+              <h3 data-en="Visionary Cinema & Chroma Stage" data-ar="المسرح السينمائي واستوديو الكروما">Visionary Cinema & Chroma Stage</h3>
+              <p data-en="Full-scale production soundstage with overhead lighting truss, green screen wall, and Sony FX6 / RED Komodo cinema rig."
+                 data-ar="استوديو إنتاج سينمائي متكامل مع شبكة إضاءة سقفية، جدار كروما أخضر، وكاميرات سينمائية احترافية.">
+                Full-scale production soundstage with overhead lighting truss, green screen wall, and Sony FX6 / RED Komodo cinema rig.
+              </p>
+              <div class="spec-chips">
+                <span class="spec-chip">Overhead Truss</span>
+                <span class="spec-chip">Chroma Green Cyc</span>
+                <span class="spec-chip">Aputure 1200d</span>
+              </div>
+              <div class="studio-card-footer">
+                <div class="price-tag-big">420 <small data-en="SAR / hour" data-ar="ر.س / ساعة">SAR / hour</small></div>
+                <a href="booking.html?studio=cinema-stage" class="btn btn-primary btn-sm"
+                   data-en="Book Studio →" data-ar="احجز الاستوديو ←">Book Studio →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EQUIPMENT & GEAR SHOWCASE (HTML CH. 2 NESTED LISTS & DEFINITION LISTS) ================= -->
+    <section class="section-padding gear-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow-badge" data-en="🎥 Included & Add-on Production Gear" data-ar="🎥 معدات التصوير والصوت والإضاءة">🎥 Included & Add-on Production Gear</span>
+          <h2 class="section-title" data-html="true"
+              data-en="Cinema-Grade <span class='highlight'>Equipment Inventory</span>"
+              data-ar="قائمة <span class='highlight'>المعدات والتجهيزات التقنية</span>">
+            Cinema-Grade <span class="highlight">Equipment Inventory</span>
+          </h2>
+          <p class="section-subtitle"
+             data-en="Structured equipment breakdown utilizing HTML5 nested ordered/unordered lists and technical glossary definition lists."
+             data-ar="تصنيف شامل لمعدات الكاميرات والمايكروفونات والإضاءة المتوفرة داخل استديوهاتنا.">
+            Structured equipment breakdown utilizing HTML5 nested ordered/unordered lists and technical glossary definition lists.
+          </p>
+        </div>
+
+        <!-- 3 Equipment Columns with Nested Lists (Chapter 2 Requirement) -->
+        <div class="gear-showcase-grid">
+          <!-- Gear 1: Cameras -->
+          <div class="gear-card">
+            <img src="images/gear-camera.jpg" alt="Sony Cinema and Mirrorless Cameras">
+            <div class="gear-card-body">
+              <h3 data-en="1. Cameras & Lenses" data-ar="1. الكاميرات والعدسات الاحترافية">1. Cameras & Lenses</h3>
+              <ol class="nested-gear-list">
+                <li>
+                  <strong data-en="Cinema & Video Cameras" data-ar="كاميرات الفيديو والسينما">Cinema & Video Cameras</strong>
+                  <ul>
+                    <li>Sony FX3 &amp; FX30 4K Cinema Line</li>
+                    <li>Canon EOS R5 C (8K RAW Video)</li>
+                    <li>Blackmagic Studio Camera 6K Pro</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong data-en="High-Resolution Stills" data-ar="كاميرات التصوير الفوتوغرافي">High-Resolution Stills</strong>
+                  <ul>
+                    <li>Sony A7R V (61MP Full-Frame)</li>
+                    <li>G-Master 24-70mm &amp; 85mm f/1.4 Lenses</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- Gear 2: Podcast & Audio -->
+          <div class="gear-card">
+            <img src="images/gear-mic.jpg" alt="Shure SM7B Podcast Microphone">
+            <div class="gear-card-body">
+              <h3 data-en="2. Podcast & Audio Systems" data-ar="2. أنظمة البودكاست والصوتيات">2. Podcast & Audio Systems</h3>
+              <ol class="nested-gear-list">
+                <li>
+                  <strong data-en="Broadcast Microphones" data-ar="المايكروفونات الإذاعية">Broadcast Microphones</strong>
+                  <ul>
+                    <li>4× Shure SM7B Vocal Dynamic Mics</li>
+                    <li>Neumann U87 Ai Condenser Mic</li>
+                    <li>DJI Mic 2 Wireless Lavalier System</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong data-en="Mixers & Recorders" data-ar="أجهزة المكساج والتسجيل">Mixers & Recorders</strong>
+                  <ul>
+                    <li>RØDECaster Pro II Integrated Console</li>
+                    <li>ATEM Mini Extreme ISO Live Switcher</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- Gear 3: Studio Lighting -->
+          <div class="gear-card">
+            <img src="images/gear-light.jpg" alt="Studio Strobe and Continuous Lighting">
+            <div class="gear-card-body">
+              <h3 data-en="3. Strobes & Continuous Lights" data-ar="3. أنظمة الإضاءة والفلاشات">3. Strobes & Continuous Lights</h3>
+              <ol class="nested-gear-list">
+                <li>
+                  <strong data-en="Photography Strobes" data-ar="فلاشات التصوير الفوتوغرافي">Photography Strobes</strong>
+                  <ul>
+                    <li>Profoto D2 1000 AirTTL Monolights</li>
+                    <li>Octaboxes, Stripboxes &amp; Beauty Dishes</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong data-en="Continuous & RGB Video Lights" data-ar="الإضاءة المستمرة وإضاءة RGB">Continuous & RGB Video Lights</strong>
+                  <ul>
+                    <li>Aputure LS 600d Pro &amp; 300x Bi-Color</li>
+                    <li>Amaran PT4c RGBWW Pixel Tubes</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- HTML Definition List (<dl>, <dt>, <dd>) Studio Terminology -->
+        <div class="dl-glossary-box">
+          <h3 style="font-size:1.35rem;"
+              data-en="📖 Studio Production Glossary (HTML Definition List)"
+              data-ar="📖 دليل مصطلحات الاستديوهات (قائمة تعريفية)">
+            📖 Studio Production Glossary (HTML Definition List)
+          </h3>
+          <dl class="dl-glossary-grid">
+            <div class="dl-item">
+              <dt data-en="Cyclorama (Infinity Cove Wall)" data-ar="جدار السايكلوراما (Cyclorama Wall)">Cyclorama (Infinity Cove Wall)</dt>
+              <dd data-en="A curved seamless wall-to-floor background that eliminates corners and creates an infinite horizon effect for photography and video."
+                  data-ar="جدار منحني بدون زوايا يربط الحائط بالأرضية بانسيابية تامة لإعطاء خلفية لا نهائية في التصوير الفوتوغرافي والسينمائي.">
+                A curved seamless wall-to-floor background that eliminates corners and creates an infinite horizon effect for photography and video.
+              </dd>
+            </div>
+
+            <div class="dl-item">
+              <dt data-en="STC 62 Acoustic Isolation" data-ar="العزل الصوتي القياسي (STC 62)">STC 62 Acoustic Isolation</dt>
+              <dd data-en="Sound Transmission Class rating of 62+ ensuring zero external noise enters the podcast and vocal recording booths."
+                  data-ar="معيار عزل صوتي متقدم يمنع تسرب أي ضوضاء خارجية ويقضي على الصدى داخل غرف البودكاست والتعليق الصوتي.">
+                Sound Transmission Class rating of 62+ ensuring zero external noise enters the podcast and vocal recording booths.
+              </dd>
+            </div>
+
+            <div class="dl-item">
+              <dt data-en="Multi-Cam ISO Recording" data-ar="التسجيل المتعدد المستقل (Multi-Cam ISO)">Multi-Cam ISO Recording</dt>
+              <dd data-en="Simultaneous recording of 3 separate 4K camera angles plus a live-switched master video file for instant podcast publishing."
+                  data-ar="تسجيل 3 زوايا كاميرات 4K بشكل منفصل ومتزامن مع ملف فيديو مدمج جاهز للنشر الفوري بعد انتهاء جلسة البودكاست.">
+                Simultaneous recording of 3 separate 4K camera angles plus a live-switched master video file for instant podcast publishing.
+              </dd>
+            </div>
+
+            <div class="dl-item">
+              <dt data-en="Tethered Capture Workstation" data-ar="منصة المعاينة الفورية (Live Tethering)">Tethered Capture Workstation</dt>
+              <dd data-en="Direct high-speed cable connection from the camera to a calibrated 27-inch Apple Studio Display for real-time client review."
+                  data-ar="ربط الكاميرا مباشرة بشاشة عرض معايرة بدقة 5K لمشاهدة الصور فور التقاطها ومراجعتها مع العميل أثناء الجلسة.">
+                Direct high-speed cable connection from the camera to a calibrated 27-inch Apple Studio Display for real-time client review.
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= 4. FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon">L</div>
+            <div class="brand-text" data-html="true"
+                 data-en="LUMEN <span>STUDIO</span>"
+                 data-ar="لُومين <span>استوديو</span>">LUMEN <span>STUDIO</span></div>
+          </a>
+          <p data-en="Saudi Arabia's premier creative studio booking platform for photography, podcast production, and commercial filmmaking."
+             data-ar="المنصة الرائدة لاستعراض وحجز استديوهات التصوير الفوتوغرافي، استديوهات البودكاست، والاستديوهات الإبداعية.">
+            Saudi Arabia's premier creative studio booking platform for photography, podcast production, and commercial filmmaking.
+          </p>
+          <div class="uni-footer-box">
+            <strong data-en="Kingdom of Saudi Arabia • Ministry of Education"
+                    data-ar="المملكة العربية السعودية • وزارة التعليم">Kingdom of Saudi Arabia • Ministry of Education</strong>
+            <span data-en="Jazan University — College of Business | Course: WEB Application Development (MGIS 372)"
+                  data-ar="جامعة جازان — كلية الأعمال | مقرر: تطوير تطبيقات الويب (MGIS 372)">
+              Jazan University — College of Business | Course: WEB Application Development (MGIS 372)
+            </span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-en="Platform Pages" data-ar="صفحات المنصة">Platform Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-en="Home & Discovery" data-ar="الرئيسية والاستكشاف">Home & Discovery</a></li>
+            <li><a href="studios.html" data-en="Explore All Studios" data-ar="استعراض الاستديوهات">Explore All Studios</a></li>
+            <li><a href="pricing.html" data-en="Packages & Comparison" data-ar="الباقات وجدول المقارنة">Packages & Comparison</a></li>
+            <li><a href="booking.html" data-en="Online Studio Booking" data-ar="نظام حجز الاستديوهات">Online Studio Booking</a></li>
+            <li><a href="about.html" data-en="About & Student Team" data-ar="عن المنصة وفريق الطالبات">About & Student Team</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-en="Studio Spaces" data-ar="أنواع الاستديوهات">Studio Spaces</h4>
+          <ul class="footer-links">
+            <li><a href="booking.html?studio=apex-photo" data-en="Apex Photo Loft" data-ar="استوديو أبيكس للتصوير">Apex Photo Loft</a></li>
+            <li><a href="booking.html?studio=voxpro-podcast" data-en="VoxPro Podcast Suite" data-ar="استوديو فوكس برو للبودكاست">VoxPro Podcast Suite</a></li>
+            <li><a href="booking.html?studio=neon-creative" data-en="Neon Pulse Creative Lab" data-ar="مختبر نيون الإبداعي">Neon Pulse Creative Lab</a></li>
+            <li><a href="booking.html?studio=daylight-cyc" data-en="Daylight Cyclorama Wall" data-ar="استوديو السايكلوراما">Daylight Cyclorama Wall</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-en="Team Members (MGIS 372)" data-ar="أسماء الطالبات المشاركات">Team Members (MGIS 372)</h4>
+          <ul class="team-footer-list">
+            <li><span>اشواق محمد احمد حكمي</span> <span class="page-tag">index.html</span></li>
+            <li><span>اريام محمد عشوي</span> <span class="page-tag">studios.html</span></li>
+            <li><span>جنا عبدالرحمن الدوسري</span> <span class="page-tag">pricing.html</span></li>
+            <li><span>امنية ابراهيم محرق</span> <span class="page-tag">booking.html</span></li>
+            <li><span>جنان يحيى حملي</span> <span class="page-tag">about.html</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-en="© 2026 LUMEN STUDIO Platform — Original Academic Group Project for Jazan University (MGIS 372)."
+              data-ar="© 2026 منصة لومين استوديو — مشروع جماعي أصيل لطالبات جامعة جازان - كلية الأعمال (MGIS 372).">
+          © 2026 LUMEN STUDIO Platform — Original Academic Group Project for Jazan University (MGIS 372).
+        </span>
+        <a href="#top" style="color:var(--accent-gold-light); font-weight:700;"
+           data-en="↑ Back to Top" data-ar="↑ العودة للأعلى">↑ Back to Top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

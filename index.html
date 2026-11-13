@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LUMEN STUDIO - Premier Studio Booking Platform for Photography, Podcast, and Creative Production Spaces. Jazan University MGIS 372 Group Project.">
+  <meta name="keywords" content="Studio Booking, Photography Studio, Podcast Studio, Creative Space, Jazan University, MGIS 372">
+  <meta name="author" content="Ashwaq Mohammed Ahmed Hakami - Jazan University">
+  <title data-en="LUMEN STUDIO | Premier Studio Booking Platform" data-ar="لومين استوديو | منصة حجز الاستديوهات الإبداعية">LUMEN STUDIO | Premier Studio Booking Platform</title>
+
+  <!-- Chapter 3: External Stylesheets -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/home.css">
+
+  <!-- Chapter 3: Embedded Stylesheet Demonstration -->
+  <style>
+    .hero-highlight-tag {
+      border-bottom: 2px dashed var(--accent-gold);
+      padding-bottom: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= 1. OFFICIAL JAZAN UNIVERSITY ACADEMIC TOPBAR ================= -->
+  <div class="academic-topbar">
+    <div class="container academic-topbar-inner">
+      <div class="uni-badge">
+        <span class="uni-crest">JU</span>
+        <span data-en="Kingdom of Saudi Arabia • Ministry of Education • Jazan University • College of Business"
+              data-ar="المملكة العربية السعودية • وزارة التعليم • جامعة جازان • كلية الأعمال">
+          Kingdom of Saudi Arabia • Ministry of Education • Jazan University • College of Business
+        </span>
+      </div>
+      <div>
+        <span class="course-pill"
+              data-en="WEB Application Development (MGIS 372)"
+              data-ar="تطوير تطبيقات الويب (MGIS 372)">
+          WEB Application Development (MGIS 372)
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 2. STICKY NAVIGATION HEADER (HTML5 <header> & <nav>) ================= -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">L</div>
+        <div class="brand-text" data-html="true"
+             data-en="LUMEN <span>STUDIO</span>"
+             data-ar="لُومين <span>استوديو</span>">LUMEN <span>STUDIO</span></div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active" data-en="Home" data-ar="الرئيسية">Home</a></li>
+          <li><a href="studios.html" data-en="Explore Studios" data-ar="استعراض الاستديوهات">Explore Studios</a></li>
+          <li><a href="pricing.html" data-en="Packages & Pricing" data-ar="الباقات والأسعار">Packages & Pricing</a></li>
+          <li><a href="booking.html" data-en="Book a Studio" data-ar="احجز استوديو">Book a Studio</a></li>
+          <li><a href="about.html" data-en="About & Team" data-ar="عن المنصة والطالبات">About & Team</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" id="langSwitchBtn" class="lang-switch-btn" aria-label="Switch Language">
+          <span class="lang-globe">🌐</span>
+          <span id="langBtnText">العربية (AR)</span>
+        </button>
+        <a href="booking.html" class="btn btn-primary btn-sm"
+           data-en="Reserve Now" data-ar="احجز الآن">Reserve Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= 3. MAIN CONTENT (<main>) ================= -->
+  <main>
+
+    <!-- Student Page Attribution Ribbon -->
+    <div class="container" style="margin-top: 1.5rem;">
+      <div class="student-page-ribbon">
+        <div class="ribbon-left">
+          <div class="student-avatar-dot">1</div>
+          <div class="ribbon-meta">
+            <span data-en="Page Designed & Developed by Student:" data-ar="تم تصميم وتطوير هذه الصفحة بواسطة الطالبة:">Page Designed & Developed by Student:</span>
+            <strong data-en="Ashwaq Mohammed Ahmed Hakami (اشواق محمد احمد حكمي)"
+                    data-ar="اشواق محمد احمد حكمي (Ashwaq Mohammed Ahmed Hakami)">Ashwaq Mohammed Ahmed Hakami (اشواق محمد احمد حكمي)</strong>
+          </div>
+        </div>
+        <div class="ribbon-meta">
+          <span data-en="Module: Home & Discovery (index.html + css/home.css)"
+                data-ar="الوحدة: الصفحة الرئيسية والاستكشاف (index.html + css/home.css)">Module: Home & Discovery (index.html + css/home.css)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span data-en="6 Acoustic & Daylight Studios Ready for Instant Booking"
+                  data-ar="6 استديوهات احترافية للصوت والتصوير متاحة للحجز الفوري">
+              6 Acoustic & Daylight Studios Ready for Instant Booking
+            </span>
+          </div>
+
+          <h1 class="hero-title" data-html="true"
+              data-en="Book World-Class <span class='gradient-text'>Photography, Podcast & Creative</span> Studios"
+              data-ar="احجز أرقى <span class='gradient-text'>استديوهات التصوير والبودكاست</span> والإنتاج الإبداعي">
+            Book World-Class <span class="gradient-text">Photography, Podcast & Creative</span> Studios
+          </h1>
+
+          <p class="hero-description"
+             data-en="Discover fully equipped creative spaces designed for photographers, podcasters, filmmakers, and brands. Cinema-grade lighting, acoustic isolation, and instant hourly reservations."
+             data-ar="منصة متكاملة تتيح للمبدعين وصناع المحتوى استعراض وحجز الاستديوهات الاحترافية المجهزة بأحدث معدات الإضاءة السينمائية والعزل الصوتي الفائق بالساعة أو بالباقات.">
+            Discover fully equipped creative spaces designed for photographers, podcasters, filmmakers, and brands. Cinema-grade lighting, acoustic isolation, and instant hourly reservations.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="studios.html" class="btn btn-primary"
+               data-en="Explore All Studios →" data-ar="استعرض جميع الاستديوهات ←">Explore All Studios →</a>
+            <a href="pricing.html" class="btn btn-outline"
+               data-en="View Rates & Student Discount" data-ar="الأسعار وخصم الطالبات">View Rates & Student Discount</a>
+          </div>
+
+          <!-- Quick Studio Finder Form (HTML Form redirecting to booking.html) -->
+          <form action="booking.html" method="get" class="quick-finder-card">
+            <div class="quick-finder-grid">
+              <div class="qf-field">
+                <label for="qfStudio" data-en="Studio Type" data-ar="نوع الاستوديو">Studio Type</label>
+                <select id="qfStudio" name="studio">
+                  <option value="apex-photo" data-en="📸 Photography Studio" data-ar="📸 استوديو التصوير الاحترافي">📸 Photography Studio</option>
+                  <option value="voxpro-podcast" data-en="🎙️ Podcast & Audio Suite" data-ar="🎙️ استوديو البودكاست والصوتيات">🎙️ Podcast & Audio Suite</option>
+                  <option value="neon-creative" data-en="🎬 Creative & Film Studio" data-ar="🎬 الاستوديو الإبداعي والسينمائي">🎬 Creative & Film Studio</option>
+                  <option value="daylight-cyc" data-en="☀️ Cyclorama Infinity Wall" data-ar="☀️ استوديو سايكلوراما (إضاءة طبيعية)">☀️ Cyclorama Infinity Wall</option>
+                </select>
+              </div>
+
+              <div class="qf-field">
+                <label for="qfDate" data-en="Preferred Date" data-ar="تاريخ الحجز">Preferred Date</label>
+                <input type="date" id="qfDate" name="date" required>
+              </div>
+
+              <div class="qf-field">
+                <label for="qfHours" data-en="Duration (Hours)" data-ar="المدة (بالساعات)">Duration (Hours)</label>
+                <input type="number" id="qfHours" name="hours" min="1" max="12" value="2">
+              </div>
+
+              <button type="submit" class="btn btn-primary"
+                      data-en="Check Availability" data-ar="تحقق من التوفر">Check Availability</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Hero Visual (<figure> & <figcaption> - HTML5 Chapter 5) -->
+        <div class="hero-visual">
+          <figure class="hero-main-figure">
+            <img src="images/hero-studio.jpg" alt="LUMEN Professional Recording and Production Studio">
+            <figcaption>
+              <span data-en="📍 Jazan Creative Hub — Studio A (Dolby Atmos & 4K Setup)"
+                    data-ar="📍 مركز جازان الإبداعي — استوديو A (تجهيز صوتي ومرئي 4K)">
+                📍 Jazan Creative Hub — Studio A (Dolby Atmos & 4K Setup)
+              </span>
+              <!-- Inline CSS Example (Chapter 3) -->
+              <span style="color: #fbbf24; font-weight: 800;">★ 4.98 (420+)</span>
+            </figcaption>
+          </figure>
+
+          <div class="floating-stat-card floating-stat-top">
+            <div class="stat-icon-box">🎙️</div>
+            <div>
+              <strong style="display:block; font-size:0.92rem;"
+                      data-en="Shure SM7B & RØDE" data-ar="مايكروفونات Shure SM7B">Shure SM7B & RØDE</strong>
+              <small style="color:var(--text-muted);"
+                     data-en="4K Multi-Cam Podcast" data-ar="بودكاست متعدد الكاميرات 4K">4K Multi-Cam Podcast</small>
+            </div>
+          </div>
+
+          <div class="floating-stat-card floating-stat-bottom">
+            <div class="stat-icon-box">💡</div>
+            <div>
+              <strong style="display:block; font-size:0.92rem;"
+                      data-en="Profoto & Aputure" data-ar="إضاءات Profoto و Aputure">Profoto & Aputure</strong>
+              <small style="color:var(--text-muted);"
+                     data-en="Included Free with Booking" data-ar="مشمولة مجاناً مع كل حجز">Included Free with Booking</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Platform Statistics Strip -->
+      <div class="container">
+        <div class="stats-strip">
+          <div class="stat-box">
+            <span class="stat-number">6+</span>
+            <span class="stat-label" data-en="Specialized Luxury Studios" data-ar="استديوهات تخصصية فاخرة">Specialized Luxury Studios</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">1,850+</span>
+            <span class="stat-label" data-en="Creative Sessions Hosted" data-ar="جلسة تصوير وبودكاست مكتملة">Creative Sessions Hosted</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">45+</span>
+            <span class="stat-label" data-en="Pro Cameras, Lights & Mics" data-ar="معدات تصوير وصوت احترافية">Pro Cameras, Lights & Mics</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">25%</span>
+            <span class="stat-label" data-en="Jazan University Student Discount" data-ar="خصم خاص لطالبات جامعة جازان">Jazan University Student Discount</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED STUDIO CATEGORIES SECTION ================= -->
+    <section class="section-padding" id="categories">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow-badge" data-en="✦ Curated Production Spaces" data-ar="✦ مساحات إنتاجية متكاملة">✦ Curated Production Spaces</span>
+          <h2 class="section-title" data-html="true"
+              data-en="Explore Our Core <span class='highlight'>Studio Categories</span>"
+              data-ar="استعرض فئات <span class='highlight'>الاستديوهات المتاحة للحجز</span>">
+            Explore Our Core <span class="highlight">Studio Categories</span>
+          </h2>
+          <p class="section-subtitle"
+             data-en="Whether you are shooting a commercial fashion lookbook, recording a hit video podcast, or producing creative reels, we have the ideal space ready."
+             data-ar="سواء كنتِ تخططين لجلسة تصوير أزياء ومنتجات، أو تسجيل حلقة بودكاست مرئية، أو إنتاج محتوى إبداعي، وفرنا لكِ المساحة المثالية.">
+            Whether you are shooting a commercial fashion lookbook, recording a hit video podcast, or producing creative reels, we have the ideal space ready.
+          </p>
+        </div>
+
+        <div class="categories-grid">
+          <!-- Category 1: Photography Studios -->
+          <article class="category-card">
+            <div class="category-img-wrap">
+              <img src="images/photo-studio-1.jpg" alt="Photography Studio with Cyclorama and Profoto Strobe Lighting">
+              <span class="category-tag" data-en="📸 Photography" data-ar="📸 التصوير الفوتوغرافي">📸 Photography</span>
+              <span class="category-price-badge" data-en="From 220 SAR/hr" data-ar="من 220 ر.س/ساعة">From 220 SAR/hr</span>
+            </div>
+            <div class="category-body">
+              <h3 data-en="Photography & Cyclorama Studios" data-ar="استديوهات التصوير والسايكلوراما">Photography & Cyclorama Studios</h3>
+              <p data-en="Spacious high-ceiling studios with seamless white infinity cyclorama walls, motorized paper backdrops, and Profoto D2 strobes."
+                 data-ar="مساحات واسعة بأسقف مرتفعة وجدار سايكلوراما أبيض لا نهائي، مع خلفيات ورقية أوتوماتيكية وإضاءات Profoto الاحترافية.">
+                Spacious high-ceiling studios with seamless white infinity cyclorama walls, motorized paper backdrops, and Profoto D2 strobes.
+              </p>
+              <ul class="category-features">
+                <li data-en="6m × 6m Seamless Infinity Cyclorama Curve" data-ar="جدار سايكلوراما منحني بأبعاد 6×6 متر">6m × 6m Seamless Infinity Cyclorama Curve</li>
+                <li data-en="Profoto Strobes, Softboxes & Beauty Dishes" data-ar="فلاشات Profoto مع سوفت بوكس متكامل">Profoto Strobes, Softboxes & Beauty Dishes</li>
+                <li data-en="Private VIP Makeup & Styling Dressing Suite" data-ar="غرفة مكياج وتبديل ملابس خاصة ومستقلة">Private VIP Makeup & Styling Dressing Suite</li>
+              </ul>
+              <a href="studios.html" class="btn btn-outline" style="margin-top:auto;"
+                 data-en="Browse Photo Studios" data-ar="تصفح استديوهات التصوير">Browse Photo Studios</a>
+            </div>
+          </article>
+
+          <!-- Category 2: Podcast Studios -->
+          <article class="category-card">
+            <div class="category-img-wrap">
+              <img src="images/podcast-studio-1.jpg" alt="Acoustic Podcast Studio with Shure Microphones">
+              <span class="category-tag" data-en="🎙️ Podcast & Audio" data-ar="🎙️ البودكاست والصوتيات">🎙️ Podcast & Audio</span>
+              <span class="category-price-badge" data-en="From 250 SAR/hr" data-ar="من 250 ر.س/ساعة">From 250 SAR/hr</span>
+            </div>
+            <div class="category-body">
+              <h3 data-en="Podcast & Broadcast Suites" data-ar="استديوهات البودكاست والتسجيل الصوتي">Podcast & Broadcast Suites</h3>
+              <p data-en="Soundproofed acoustic rooms engineered for crystal-clear vocal recording and multi-angle 4K video podcasts up to 4 hosts."
+                 data-ar="غرف معزولة صوتياً بألواح أكوستيك احترافية لتسجيل البودكاست الصوتي والمرئي بدقة 4K لعدد يصل إلى 4 متحدثين.">
+                Soundproofed acoustic rooms engineered for crystal-clear vocal recording and multi-angle 4K video podcasts up to 4 hosts.
+              </p>
+              <ul class="category-features">
+                <li data-en="4× Shure SM7B Dynamic Broadcast Microphones" data-ar="4 مايكروفونات إذاعية من طراز Shure SM7B">4× Shure SM7B Dynamic Broadcast Microphones</li>
+                <li data-en="RØDECaster Pro II Mixer & 3× Sony FX30 4K Cams" data-ar="مكسر RØDECaster Pro II مع 3 كاميرات سوني 4K">RØDECaster Pro II Mixer & 3× Sony FX30 4K Cams</li>
+                <li data-en="Customizable Acoustic Set & RGB Mood Walls" data-ar="ديكور قابل للتخصيص مع إضاءة محيطية RGB">Customizable Acoustic Set & RGB Mood Walls</li>
+              </ul>
+              <a href="studios.html" class="btn btn-outline" style="margin-top:auto;"
+                 data-en="Browse Podcast Studios" data-ar="تصفح استديوهات البودكاست">Browse Podcast Studios</a>
+            </div>
+          </article>
+
+          <!-- Category 3: Creative Studios -->
+          <article class="category-card">
+            <div class="category-img-wrap">
+              <img src="images/creative-studio-1.jpg" alt="Creative Video Production and Lifestyle Content Studio">
+              <span class="category-tag" data-en="🎬 Creative & Film" data-ar="🎬 الاستديوهات الإبداعية">🎬 Creative & Film</span>
+              <span class="category-price-badge" data-en="From 290 SAR/hr" data-ar="من 290 ر.س/ساعة">From 290 SAR/hr</span>
+            </div>
+            <div class="category-body">
+              <h3 data-en="Creative & Multi-Set Labs" data-ar="الاستديوهات الإبداعية ومتعددة الديكورات">Creative & Multi-Set Labs</h3>
+              <p data-en="Modular lifestyle sets, RGB neon tubes, green screen chroma walls, and editing workstations built for filmmakers and content creators."
+                 data-ar="استديوهات إبداعية تضم ديكورات عصرية متنوعة، إضاءات نيون سينمائية، كروما خضراء، ومحطات مونتاج لصناع المحتوى.">
+                Modular lifestyle sets, RGB neon tubes, green screen chroma walls, and editing workstations built for filmmakers and content creators.
+              </p>
+              <ul class="category-features">
+                <li data-en="Aputure 600d Pro & Amaran RGB Pixel Tubes" data-ar="إضاءات سينمائية Aputure 600d وأنابيب RGB">Aputure 600d Pro & Amaran RGB Pixel Tubes</li>
+                <li data-en="Furnished Lifestyle Corners & Green Screen" data-ar="زوايا ديكور مؤثثة وشاشة كروما خضراء">Furnished Lifestyle Corners & Green Screen</li>
+                <li data-en="High-Speed Fiber Wi-Fi & Live Tethering Mac Studio" data-ar="اتصال فايبر فائق السرعة وجهاز Mac Studio للمعاينة">High-Speed Fiber Wi-Fi & Live Tethering Mac Studio</li>
+              </ul>
+              <a href="studios.html" class="btn btn-outline" style="margin-top:auto;"
+                 data-en="Browse Creative Studios" data-ar="تصفح الاستديوهات الإبداعية">Browse Creative Studios</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS (3-STEP WORKFLOW) ================= -->
+    <section class="section-padding" style="padding-top: 1rem;">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow-badge" data-en="⚡ Seamless Booking Workflow" data-ar="⚡ خطوات حجز سهلة وسريعة">⚡ Seamless Booking Workflow</span>
+          <h2 class="section-title" data-html="true"
+              data-en="How to Book Your Studio in <span class='highlight'>3 Simple Steps</span>"
+              data-ar="كيف تحجزين الاستوديو في <span class='highlight'>3 خطوات بسيطة</span>">
+            How to Book Your Studio in <span class="highlight">3 Simple Steps</span>
+          </h2>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h3 style="margin-bottom:0.65rem;"
+                data-en="1. Choose Your Studio Space" data-ar="1. اختاري الاستوديو المناسب">1. Choose Your Studio Space</h3>
+            <p style="color:var(--text-secondary); font-size:0.93rem;"
+               data-en="Explore our Photography, Podcast, or Creative studios. Compare room dimensions, acoustic ratings, and included equipment."
+               data-ar="استعرضي استديوهات التصوير أو البودكاست أو الاستديوهات الإبداعية، وقارني المساحات والمعدات المشمولة.">
+              Explore our Photography, Podcast, or Creative studios. Compare room dimensions, acoustic ratings, and included equipment.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h3 style="margin-bottom:0.65rem;"
+                data-en="2. Customize Gear & Lighting" data-ar="2. خصصي المعدات والإضاءة">2. Customize Gear & Lighting</h3>
+            <p style="color:var(--text-secondary); font-size:0.93rem;"
+               data-en="Select your date, duration, RGB backdrop lighting mood, and optional camera/sound engineer add-ons with instant price calculation."
+               data-ar="حددي التاريخ وعدد الساعات ولون الإضاءة الخلفية والمعدات الإضافية مع حساب فوري ومباشر للتكلفة.">
+              Select your date, duration, RGB backdrop lighting mood, and optional camera/sound engineer add-ons with instant price calculation.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <h3 style="margin-bottom:0.65rem;"
+                data-en="3. Arrive, Create & Shine" data-ar="3. احصلي على التأكيد وابدئي الإبداع">3. Arrive, Create & Shine</h3>
+            <p style="color:var(--text-secondary); font-size:0.93rem;"
+               data-en="Receive your instant booking reference pass. Our studio assistant pre-lights and calibrates your room before you arrive."
+               data-ar="استلمي تذكرة تأكيد الحجز فوراً، وسيقوم فريقنا بتجهيز الإضاءة والصوت قبل وصولكِ لتبدئي التصوير مباشرة.">
+              Receive your instant booking reference pass. Our studio assistant pre-lights and calibrates your room before you arrive.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HTML5 CHAPTER 5 SEMANTIC METRICS & INTERACTIVE FAQ ================= -->
+    <section class="section-padding interactive-metrics-section">
+      <div class="container metrics-faq-grid">
+        <!-- Left: HTML5 <meter> and <progress> Technical Benchmarks -->
+        <div class="metrics-card">
+          <span class="eyebrow-badge" data-en="📊 Studio Technical Benchmarks" data-ar="📊 معايير الجودة التقنية للاستديوهات">📊 Studio Technical Benchmarks</span>
+          <h3 style="font-size:1.5rem; margin-bottom:1.25rem;"
+              data-en="Acoustic & Lighting Calibration" data-ar="كفاءة العزل الصوتي والإضاءة الاحترافية">Acoustic & Lighting Calibration</h3>
+
+          <div class="metric-item">
+            <div class="metric-header">
+              <span data-en="Acoustic Sound Isolation Rating (STC 62)" data-ar="نسبة العزل الصوتي في استوديو البودكاست (STC 62)">Acoustic Sound Isolation Rating (STC 62)</span>
+              <span style="color:var(--accent-gold-light);">98%</span>
+            </div>
+            <meter min="0" max="100" low="40" high="85" optimum="95" value="98">98%</meter>
+          </div>
+
+          <div class="metric-item">
+            <div class="metric-header">
+              <span data-en="Color Accuracy Index (CRI 99+ Daylight LEDs)" data-ar="دقة الألوان في إضاءات التصوير (CRI 99+)">Color Accuracy Index (CRI 99+ Daylight LEDs)</span>
+              <span style="color:var(--accent-gold-light);">99%</span>
+            </div>
+            <meter min="0" max="100" low="50" high="90" optimum="99" value="99">99%</meter>
+          </div>
+
+          <div class="metric-item">
+            <div class="metric-header">
+              <span data-en="This Week's Studio Availability Remaining" data-ar="نسبة الأوقات المتاحة للحجز خلال هذا الأسبوع">This Week's Studio Availability Remaining</span>
+              <span style="color:var(--accent-emerald);">74%</span>
+            </div>
+            <progress value="74" max="100">74%</progress>
+          </div>
+
+          <p style="font-size:0.86rem; color:var(--text-muted); margin-top:1rem;">
+            <span data-en="All studios are sanitized and calibrated daily from " data-ar="يتم تعقيم ومعايرة كافة الاستديوهات يومياً من الساعة ">All studios are sanitized and calibrated daily from </span>
+            <time datetime="08:00">08:00 AM</time> — <time datetime="23:00">11:00 PM</time>.
+          </p>
+        </div>
+
+        <!-- Right: HTML5 <details> and <summary> Interactive FAQ -->
+        <div>
+          <span class="eyebrow-badge" data-en="❓ Frequently Asked Questions" data-ar="❓ الأسئلة الشائعة">❓ Frequently Asked Questions</span>
+          <h3 style="font-size:1.5rem; margin-bottom:1.25rem;"
+              data-en="Everything You Need to Know" data-ar="كل ما تحتاجين معرفته قبل الحجز">Everything You Need to Know</h3>
+
+          <details class="faq-item" open>
+            <summary data-en="Is basic lighting and audio gear included in the hourly rate?"
+                     data-ar="هل تشمل أسعار الساعة معدات الإضاءة والصوت الأساسية؟">
+              Is basic lighting and audio gear included in the hourly rate?
+            </summary>
+            <p data-en="Yes! Every studio reservation includes standard Profoto/Aputure lighting, C-stands, backdrops, and up to 4 Shure podcast microphones at no extra cost."
+               data-ar="نعم! جميع الحجوزات تشمل إضاءات التصوير الاحترافية والخلفيات ومايكروفونات البودكاست الأربعة مجاناً ضمن سعر الساعة.">
+              Yes! Every studio reservation includes standard Profoto/Aputure lighting, C-stands, backdrops, and up to 4 Shure podcast microphones at no extra cost.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary data-en="How do Jazan University students claim the 25% discount?"
+                     data-ar="كيف تحصل طالبات جامعة جازان على خصم 25%؟">
+              How do Jazan University students claim the 25% discount?
+            </summary>
+            <p data-en="Simply check the 'Jazan University Student Discount (25%)' option on the Booking page and present your university ID upon arrival."
+               data-ar="كل ما عليكِ هو تفعيل خيار 'خصم طالبات جامعة جازان (25%)' في صفحة الحجز وإبراز البطاقة الجامعية عند الحضور.">
+              Simply check the 'Jazan University Student Discount (25%)' option on the Booking page and present your university ID upon arrival.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary data-en="Can we hire an on-site sound engineer or lighting assistant?"
+                     data-ar="هل يمكن طلب مهندسة صوت أو مساعدة إضاءة أثناء الجلسة؟">
+              Can we hire an on-site sound engineer or lighting assistant?
+            </summary>
+            <p data-en="Absolutely. During checkout on our Booking page, you can add a dedicated Sound Engineer, Lighting Grip, or Multi-Cam Editor to your session."
+               data-ar="بالتأكيد! يمكنكِ إضافة مهندسة صوت أو مساعدة إضاءة وتصوير بضغطة زر من قائمة الخدمات الإضافية في صفحة الحجز.">
+              Absolutely. During checkout on our Booking page, you can add a dedicated Sound Engineer, Lighting Grip, or Multi-Cam Editor to your session.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ACADEMIC PROJECT TEAM QUICK BANNER ================= -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="home-team-banner">
+          <span class="eyebrow-badge" data-en="🎓 Jazan University • College of Business • MGIS 372"
+                data-ar="🎓 جامعة جازان • كلية الأعمال • مقرر MGIS 372">
+            🎓 Jazan University • College of Business • MGIS 372
+          </span>
+          <h2 class="section-title" data-en="Project Developed by Our 5-Student Team"
+              data-ar="فريق الطالبات المشاركات في تطوير المنصة">
+            Project Developed by Our 5-Student Team
+          </h2>
+          <p class="section-subtitle"
+             data-en="Click on any student's card below to visit the HTML & CSS module she designed and developed:"
+             data-ar="اضغطي على اسم أي طالبة لاستعراض صفحة الـ HTML وملف الـ CSS الخاص بها ضمن المشروع:">
+            Click on any student's card below to visit the HTML & CSS module she designed and developed:
+          </p>
+
+          <div class="home-team-pills">
+            <a href="index.html" class="student-pill-card">
+              <span class="student-avatar-dot">1</span>
+              <div style="text-align:start;">
+                <strong style="display:block; color:var(--text-primary);">اشواق محمد احمد حكمي</strong>
+                <small style="color:var(--accent-gold-light);" data-en="Home Page (index.html)" data-ar="الصفحة الرئيسية (index.html)">Home Page (index.html)</small>
+              </div>
+            </a>
+
+            <a href="studios.html" class="student-pill-card">
+              <span class="student-avatar-dot">2</span>
+              <div style="text-align:start;">
+                <strong style="display:block; color:var(--text-primary);">اريام محمد عشوي</strong>
+                <small style="color:var(--accent-gold-light);" data-en="Studios Catalog (studios.html)" data-ar="صفحة الاستديوهات (studios.html)">Studios Catalog (studios.html)</small>
+              </div>
+            </a>
+
+            <a href="pricing.html" class="student-pill-card">
+              <span class="student-avatar-dot">3</span>
+              <div style="text-align:start;">
+                <strong style="display:block; color:var(--text-primary);">جنا عبدالرحمن الدوسري</strong>
+                <small style="color:var(--accent-gold-light);" data-en="Packages & Table (pricing.html)" data-ar="الباقات والأسعار (pricing.html)">Packages & Table (pricing.html)</small>
+              </div>
+            </a>
+
+            <a href="booking.html" class="student-pill-card">
+              <span class="student-avatar-dot">4</span>
+              <div style="text-align:start;">
+                <strong style="display:block; color:var(--text-primary);">امنية ابراهيم محرق</strong>
+                <small style="color:var(--accent-gold-light);" data-en="Booking System (booking.html)" data-ar="صفحة الحجز الفوري (booking.html)">Booking System (booking.html)</small>
+              </div>
+            </a>
+
+            <a href="about.html" class="student-pill-card">
+              <span class="student-avatar-dot">5</span>
+              <div style="text-align:start;">
+                <strong style="display:block; color:var(--text-primary);">جنان يحيى حملي</strong>
+                <small style="color:var(--accent-gold-light);" data-en="About & Team (about.html)" data-ar="عن المنصة والفريق (about.html)">About & Team (about.html)</small>
+              </div>
+            </a>
+          </div>
+
+          <a href="about.html" class="btn btn-primary"
+             data-en="View Full Academic Details & Team Roles"
+             data-ar="استعراض تفاصيل المشروع الأكاديمي وأدوار الطالبات">
+            View Full Academic Details & Team Roles
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= 4. FOOTER (<footer>) ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon">L</div>
+            <div class="brand-text" data-html="true"
+                 data-en="LUMEN <span>STUDIO</span>"
+                 data-ar="لُومين <span>استوديو</span>">LUMEN <span>STUDIO</span></div>
+          </a>
+          <p data-en="Saudi Arabia's premier creative studio booking platform for photography, podcast production, and commercial filmmaking."
+             data-ar="المنصة الرائدة لاستعراض وحجز استديوهات التصوير الفوتوغرافي، استديوهات البودكاست، والاستديوهات الإبداعية.">
+            Saudi Arabia's premier creative studio booking platform for photography, podcast production, and commercial filmmaking.
+          </p>
+          <div class="uni-footer-box">
+            <strong data-en="Kingdom of Saudi Arabia • Ministry of Education"
+                    data-ar="المملكة العربية السعودية • وزارة التعليم">Kingdom of Saudi Arabia • Ministry of Education</strong>
+            <span data-en="Jazan University — College of Business | Course: WEB Application Development (MGIS 372)"
+                  data-ar="جامعة جازان — كلية الأعمال | مقرر: تطوير تطبيقات الويب (MGIS 372)">
+              Jazan University — College of Business | Course: WEB Application Development (MGIS 372)
+            </span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-en="Platform Pages" data-ar="صفحات المنصة">Platform Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-en="Home & Discovery" data-ar="الرئيسية والاستكشاف">Home & Discovery</a></li>
+            <li><a href="studios.html" data-en="Explore All Studios" data-ar="استعراض الاستديوهات">Explore All Studios</a></li>
+            <li><a href="pricing.html" data-en="Packages & Comparison" data-ar="الباقات وجدول المقارنة">Packages & Comparison</a></li>
+            <li><a href="booking.html" data-en="Online Studio Booking" data-ar="نظام حجز الاستديوهات">Online Studio Booking</a></li>
+            <li><a href="about.html" data-en="About & Student Team" data-ar="عن المنصة وفريق الطالبات">About & Student Team</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-en="Studio Spaces" data-ar="أنواع الاستديوهات">Studio Spaces</h4>
+          <ul class="footer-links">
+            <li><a href="studios.html" data-en="Apex Photo Loft" data-ar="استوديو أبيكس للتصوير">Apex Photo Loft</a></li>
+            <li><a href="studios.html" data-en="VoxPro Podcast Suite" data-ar="استوديو فوكس برو للبودكاست">VoxPro Podcast Suite</a></li>
+            <li><a href="studios.html" data-en="Neon Pulse Creative Lab" data-ar="مختبر نيون الإبداعي">Neon Pulse Creative Lab</a></li>
+            <li><a href="studios.html" data-en="Daylight Cyclorama Wall" data-ar="استوديو السايكلوراما">Daylight Cyclorama Wall</a></li>
+            <li><a href="mailto:bookings@lumenstudio.sa" data-en="✉️ bookings@lumenstudio.sa" data-ar="✉️ bookings@lumenstudio.sa">✉️ bookings@lumenstudio.sa</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-en="Team Members (MGIS 372)" data-ar="أسماء الطالبات المشاركات">Team Members (MGIS 372)</h4>
+          <ul class="team-footer-list">
+            <li><span>اشواق محمد احمد حكمي</span> <span class="page-tag">index.html</span></li>
+            <li><span>اريام محمد عشوي</span> <span class="page-tag">studios.html</span></li>
+            <li><span>جنا عبدالرحمن الدوسري</span> <span class="page-tag">pricing.html</span></li>
+            <li><span>امنية ابراهيم محرق</span> <span class="page-tag">booking.html</span></li>
+            <li><span>جنان يحيى حملي</span> <span class="page-tag">about.html</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-en="© 2026 LUMEN STUDIO Platform — Original Academic Group Project for Jazan University (MGIS 372)."
+              data-ar="© 2026 منصة لومين استوديو — مشروع جماعي أصيل لطالبات جامعة جازان - كلية الأعمال (MGIS 372).">
+          © 2026 LUMEN STUDIO Platform — Original Academic Group Project for Jazan University (MGIS 372).
+        </span>
+        <a href="#top" style="color:var(--accent-gold-light); font-weight:700;"
+           data-en="↑ Back to Top" data-ar="↑ العودة للأعلى">↑ Back to Top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
